@@ -19,9 +19,11 @@ if (config.env === 'development') {
   app.use(logger('dev'));
 }
 
-// Choose what fronten framework to serve the dist from
+// Choose what frontend framework to serve the dist from
 var distDir = '../../dist/';
-if (config.frontend == 'react'){
+if(config.frontend == 'disabled'){
+  //create this functionality
+}else if (config.frontend == 'react'){
   distDir ='../../node_modules/material-dashboard-react/dist'
  }else{
   distDir ='../../dist/' ;
